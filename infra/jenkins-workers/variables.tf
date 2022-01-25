@@ -1,0 +1,11 @@
+variable "instance_type" {}
+variable "key_name" {}
+variable "vpc_id" {}
+variable "master_sg_id" {}
+variable "bastion_sg_id" {}
+variable "name_prefix" {}
+variable "subnets" {}
+variable "master_private_ip" {}
+variable "master_instance" {}
+variable "elb_id" {}
+variable "user_data_path" {}

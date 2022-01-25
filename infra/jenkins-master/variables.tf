@@ -1,0 +1,14 @@
+variable "instance_type" {}
+variable "subnets" {}
+variable "name_prefix" {}
+variable "vpc_id" {}
+variable "vpc_name" {}
+variable "sg_name" {}
+variable "bastion_sg_id" {}
+variable "allowed_cidr" {}
+variable "key" {}
+variable "public_subnets" {}
+variable "ssl_arn" {}
+variable "domain_name" {}
+variable "hosted_zone_id" {}
+variable "vpc_cidr" {}
