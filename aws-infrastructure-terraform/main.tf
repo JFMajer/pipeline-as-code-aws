@@ -143,18 +143,7 @@ module "jenkins-workers" {
   user_data_path    = "${path.root}/join-cluster.tpl"
 }
 
-
-# resource "tls_private_key" "jenkins_key" {
-#   algorithm = "RSA"
-#   rsa_bits  = 4096
-# }
-
-# resource "local_file" "jenkins_key" {
-#   filename = "${aws_key_pair.jenkins_key.key_name}.pem"
-#   content  = tls_private_key.jenkins_key.private_key_pem
-# }
-
 resource "aws_key_pair" "jenkins_key" {
   key_name   = var.key_name
-  public_key = file("/home/kuba/.ssh/id_rsa.pub")
+  public_key = file(var.public_key_path)
 }

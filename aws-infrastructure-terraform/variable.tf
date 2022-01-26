@@ -43,10 +43,6 @@ variable "bastion_sg_name" {
   default = "pac-jenkins-bastion-sg"
 }
 
-variable "bastion_allowed_cidr" {
-  type    = string
-  default = "89.25.227.114/32"
-}
 
 variable "jenkins-master_instance_type" {
   type    = string
@@ -58,25 +54,12 @@ variable "jenkins-master_sg_name" {
   default = "pac-jenkins-master-sg"
 }
 
-variable "master_allowed_cidr" {
-  type    = string
-  default = "89.25.227.114/32"
-}
-
-variable "ssl_arn" {
-  type    = string
-  default = "arn:aws:acm:eu-north-1:578997275585:certificate/dcb37998-4ee8-449a-a14f-ac3bfbda7415"
-}
-
-variable "domain_name" {
-  type    = string
-  default = "heheszlo.com"
-}
-
-variable "hosted_zone_id" {
-  type    = string
-  default = "Z02089222EZQC5CLCE6KM"
-}
+variable "bastion_allowed_cidr" {}
+variable "master_allowed_cidr" {}
+variable "ssl_arn" {}
+variable "domain_name" {}
+variable "hosted_zone_id" {}
+variable "public_key_path" {}
 
 variable "worker_instance_type" {
   type    = string

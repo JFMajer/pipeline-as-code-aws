@@ -7,7 +7,6 @@ variable "ami_regions" {}
 variable "instance_type" {}
 variable "tags" {}
 variable "source_ami" {}
-//variable "aws_profile" {}
 
 source "amazon-ebs" "amazon-linux-ami" {
   ami_name      = "jenkins-master-${local.timestamp}"

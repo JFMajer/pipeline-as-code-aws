@@ -12,4 +12,4 @@ tags = {
   "Created-by"  = "Packer"
 }
 
-private_key_path = "/home/kuba/.ssh/id_rsa"
+private_key_path = "~/.ssh/id_rsa"

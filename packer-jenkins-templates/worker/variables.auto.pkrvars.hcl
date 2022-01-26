@@ -12,4 +12,3 @@ tags = {
   "Created-by"  = "Packer"
 }
 
-source_ami = "ami-067a92fcca2611950"
