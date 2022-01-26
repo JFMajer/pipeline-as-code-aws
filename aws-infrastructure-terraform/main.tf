@@ -143,6 +143,11 @@ module "jenkins-workers" {
   user_data_path    = "${path.root}/join-cluster.tpl"
 }
 
+module "lambda-api-gateway" {
+  source      = "./lambda-api-gateway"
+  jenkins_url = module.jenkins-master.jenkins-dns
+}
+
 resource "aws_key_pair" "jenkins_key" {
   key_name   = var.key_name
   public_key = file(var.public_key_path)

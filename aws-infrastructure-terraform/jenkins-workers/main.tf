@@ -13,12 +13,6 @@ resource "aws_launch_template" "jenkins_workers_lt" {
   instance_type = var.instance_type
   key_name      = var.key_name
 
-  block_device_mappings {
-    ebs {
-      volume_size = 30
-    }
-  }
-
   lifecycle {
     create_before_destroy = true
   }

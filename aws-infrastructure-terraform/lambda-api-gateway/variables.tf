@@ -1,0 +1,1 @@
+variable "jenkins_url" {}
