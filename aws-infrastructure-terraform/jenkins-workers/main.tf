@@ -17,6 +17,14 @@ resource "aws_launch_template" "jenkins_workers_lt" {
     create_before_destroy = true
   }
 
+  block_device_mappings {
+    device_name = "/dev/xvda"
+    ebs {
+      volume_size = 50
+      volume_type = "gp2"
+    }
+  }
+
   instance_market_options {
     market_type = "spot"
   }

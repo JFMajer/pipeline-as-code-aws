@@ -87,7 +87,7 @@ EOF
 }
 
 resource "aws_lambda_function" "lambda" {
-  filename      = "./deployment.zip"
+  filename      = "./deployment2.zip"
   function_name = "GitHubWebhookForwarder"
   role          = aws_iam_role.role.arn
   handler       = "index.handler"
